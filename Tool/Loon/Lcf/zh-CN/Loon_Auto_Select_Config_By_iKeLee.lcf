@@ -85,6 +85,8 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 
 [Proxy Group]
 # 手动策略组
+全球手动策略=select, 全球全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+AI-专项手动策略=select, 美国手动策略, 新国手动策略, 日本手动策略, 英国手动策略, 德国手动策略, 法国手动策略, 加拿大手动策略, 全球手动策略, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 香港手动策略=select, 香港全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 台湾手动策略=select, 台湾全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
 日本手动策略=select, 日本全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
@@ -109,7 +111,6 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 印度手动策略=select, 印度全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IN.png
 巴西手动策略=select, 巴西全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/BR.png
 墨西哥手动策略=select, 墨西哥全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MX.png
-全球手动策略=select, 全球全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 # --------------------------------
 # 时延优选策略组
 全球-自动=url-test, 全球节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
@@ -152,7 +153,7 @@ FINAL, 兜底后备策略
 [Remote Rule]
 https://rule.kelee.one/Loon/Telegram.lsr, policy=兜底后备策略, tag=Telegram, enabled=true
 https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy=新国手动策略, tag=TikTok, enabled=true
-https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=美国手动策略, tag=AI, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI-专项手动策略, tag=AI, enabled=true
 https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr, policy=全球手动策略, tag=Speedtest Intl, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
@@ -179,5 +180,6 @@ hostname=
 ca-p12=
 ca-passphrase=
 skip-server-cert-verify=false
+
 
 
