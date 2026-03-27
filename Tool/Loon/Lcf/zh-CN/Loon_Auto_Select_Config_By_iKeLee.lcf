@@ -1,4 +1,4 @@
-# Loon 自动配置 - 此配置文件自动选择网络时延最低的节点，全程无需人工干预，完全自动化。
+﻿# Loon 自动配置 - 此配置文件自动选择网络时延最低的节点，全程无需人工干预，完全自动化。
 # Date: 2025-11-08 00:21:37
 # Author: https://t.me/iKeLee
 # 更多插件可前往 https://hub.kelee.one 安装
@@ -31,36 +31,116 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 [Remote Proxy]
 
 [Remote Filter]
-香港节点=NameRegex, FilterKey="^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-台湾节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇼|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-日本节点=NameRegex, FilterKey="^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-韩国节点=NameRegex, FilterKey="^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-新国节点=NameRegex, FilterKey="^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-美国节点=NameRegex, FilterKey="^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-游戏节点=NameRegex, FilterKey="^(?=.*((?i)游戏|🎮|(\b(GAME)(\d+)?\b)))(?!.*((?i)回国|校园)).*$"
-全球节点=NameRegex, FilterKey="^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|失联|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+香港全部节点=NameRegex, FilterKey="^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong\s?Kong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+台湾全部节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇼|台湾|台北|新北|台中|高雄|(\b(TW|TWN|Taiwan|Taipei)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+日本全部节点=NameRegex, FilterKey="^(?=.*((?i)🇯🇵|日本|樱花|东京|大阪|泉日|川日|埼玉|名古屋|福冈|北海道|(\b(JP|JPN|Japan|Tokyo|Osaka)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+韩国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇰🇷|韩国|韓|首尔|釜山|仁川|(\b(KR|KOR|Korea|Seoul)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+新国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇸🇬|新加坡|狮城|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+美国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇺🇸|美国|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|波特兰|(\b(US|USA|United\s?States|America|Los\s?Angeles|San\s?Jose)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+加拿大全部节点=NameRegex, FilterKey="^(?=.*((?i)🇨🇦|加拿大|温哥华|多伦多|蒙特利尔|(\b(CA|CAN|Canada|Vancouver|Toronto)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+澳大利亚全部节点=NameRegex, FilterKey="^(?=.*((?i)🇦🇺|澳大利亚|澳洲|悉尼|墨尔本|珀斯|(\b(AU|AUS|Australia|Sydney|Melbourne)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+英国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇬🇧|英国|伦敦|曼彻斯特|(\b(UK|GB|GBR|United\s?Kingdom|Britain|London)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+德国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇩🇪|德国|法兰克福|柏林|慕尼黑|(\b(DE|DEU|Germany|Frankfurt|Berlin)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+法国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇫🇷|法国|巴黎|马赛|(\b(FR|FRA|France|Paris)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+荷兰全部节点=NameRegex, FilterKey="^(?=.*((?i)🇳🇱|荷兰|阿姆斯特丹|(\b(NL|NLD|Netherlands|Amsterdam)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+意大利全部节点=NameRegex, FilterKey="^(?=.*((?i)🇮🇹|意大利|罗马|米兰|(\b(IT|ITA|Italy|Rome|Milan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+西班牙全部节点=NameRegex, FilterKey="^(?=.*((?i)🇪🇸|西班牙|马德里|巴塞罗那|(\b(ES|ESP|Spain|Madrid|Barcelona)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+瑞典全部节点=NameRegex, FilterKey="^(?=.*((?i)🇸🇪|瑞典|斯德哥尔摩|(\b(SE|SWE|Sweden|Stockholm)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+俄罗斯全部节点=NameRegex, FilterKey="^(?=.*((?i)🇷🇺|俄罗斯|莫斯科|圣彼得堡|(\b(RU|RUS|Russia|Moscow)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+土耳其全部节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇷|土耳其|伊斯坦布尔|(\b(TR|TUR|Turkey|Istanbul)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+阿联酋全部节点=NameRegex, FilterKey="^(?=.*((?i)🇦🇪|阿联酋|迪拜|阿布扎比|(\b(UAE|AE|ARE|United\s?Arab\s?Emirates|Dubai)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+泰国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇭|泰国|曼谷|(\b(TH|THA|Thailand|Bangkok)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+马来西亚全部节点=NameRegex, FilterKey="^(?=.*((?i)🇲🇾|马来西亚|吉隆坡|(\b(MY|MYS|Malaysia|Kuala\s?Lumpur)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+越南全部节点=NameRegex, FilterKey="^(?=.*((?i)🇻🇳|越南|河内|胡志明|(\b(VN|VNM|Vietnam|Hanoi|Ho\s?Chi\s?Minh)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+印度全部节点=NameRegex, FilterKey="^(?=.*((?i)🇮🇳|印度|孟买|新德里|(\b(IN|IND|India|Mumbai|Delhi)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+巴西全部节点=NameRegex, FilterKey="^(?=.*((?i)🇧🇷|巴西|圣保罗|里约|(\b(BR|BRA|Brazil|Sao\s?Paulo|Rio)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+墨西哥全部节点=NameRegex, FilterKey="^(?=.*((?i)🇲🇽|墨西哥|墨城|(\b(MX|MEX|Mexico)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+全球全部节点=NameRegex, FilterKey="^(?=.*(.))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+
+香港节点=NameRegex, FilterKey="^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong\s?Kong)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+台湾节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇼|台湾|台北|新北|台中|高雄|(\b(TW|TWN|Taiwan|Taipei)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+日本节点=NameRegex, FilterKey="^(?=.*((?i)🇯🇵|日本|樱花|东京|大阪|泉日|川日|埼玉|名古屋|福冈|北海道|(\b(JP|JPN|Japan|Tokyo|Osaka)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+韩国节点=NameRegex, FilterKey="^(?=.*((?i)🇰🇷|韩国|韓|首尔|釜山|仁川|(\b(KR|KOR|Korea|Seoul)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+新国节点=NameRegex, FilterKey="^(?=.*((?i)🇸🇬|新加坡|狮城|(\b(SG|SGP|Singapore)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+美国节点=NameRegex, FilterKey="^(?=.*((?i)🇺🇸|美国|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|波特兰|(\b(US|USA|United\s?States|America|Los\s?Angeles|San\s?Jose)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+加拿大节点=NameRegex, FilterKey="^(?=.*((?i)🇨🇦|加拿大|温哥华|多伦多|蒙特利尔|(\b(CA|CAN|Canada|Vancouver|Toronto)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+澳大利亚节点=NameRegex, FilterKey="^(?=.*((?i)🇦🇺|澳大利亚|澳洲|悉尼|墨尔本|珀斯|(\b(AU|AUS|Australia|Sydney|Melbourne)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+英国节点=NameRegex, FilterKey="^(?=.*((?i)🇬🇧|英国|伦敦|曼彻斯特|(\b(UK|GB|GBR|United\s?Kingdom|Britain|London)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+德国节点=NameRegex, FilterKey="^(?=.*((?i)🇩🇪|德国|法兰克福|柏林|慕尼黑|(\b(DE|DEU|Germany|Frankfurt|Berlin)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+法国节点=NameRegex, FilterKey="^(?=.*((?i)🇫🇷|法国|巴黎|马赛|(\b(FR|FRA|France|Paris)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+荷兰节点=NameRegex, FilterKey="^(?=.*((?i)🇳🇱|荷兰|阿姆斯特丹|(\b(NL|NLD|Netherlands|Amsterdam)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+意大利节点=NameRegex, FilterKey="^(?=.*((?i)🇮🇹|意大利|罗马|米兰|(\b(IT|ITA|Italy|Rome|Milan)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+西班牙节点=NameRegex, FilterKey="^(?=.*((?i)🇪🇸|西班牙|马德里|巴塞罗那|(\b(ES|ESP|Spain|Madrid|Barcelona)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+瑞典节点=NameRegex, FilterKey="^(?=.*((?i)🇸🇪|瑞典|斯德哥尔摩|(\b(SE|SWE|Sweden|Stockholm)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+俄罗斯节点=NameRegex, FilterKey="^(?=.*((?i)🇷🇺|俄罗斯|莫斯科|圣彼得堡|(\b(RU|RUS|Russia|Moscow)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+土耳其节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇷|土耳其|伊斯坦布尔|(\b(TR|TUR|Turkey|Istanbul)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+阿联酋节点=NameRegex, FilterKey="^(?=.*((?i)🇦🇪|阿联酋|迪拜|阿布扎比|(\b(UAE|AE|ARE|United\s?Arab\s?Emirates|Dubai)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+泰国节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇭|泰国|曼谷|(\b(TH|THA|Thailand|Bangkok)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+马来西亚节点=NameRegex, FilterKey="^(?=.*((?i)🇲🇾|马来西亚|吉隆坡|(\b(MY|MYS|Malaysia|Kuala\s?Lumpur)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+越南节点=NameRegex, FilterKey="^(?=.*((?i)🇻🇳|越南|河内|胡志明|(\b(VN|VNM|Vietnam|Hanoi|Ho\s?Chi\s?Minh)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+印度节点=NameRegex, FilterKey="^(?=.*((?i)🇮🇳|印度|孟买|新德里|(\b(IN|IND|India|Mumbai|Delhi)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+巴西节点=NameRegex, FilterKey="^(?=.*((?i)🇧🇷|巴西|圣保罗|里约|(\b(BR|BRA|Brazil|Sao\s?Paulo|Rio)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+墨西哥节点=NameRegex, FilterKey="^(?=.*((?i)🇲🇽|墨西哥|墨城|(\b(MX|MEX|Mexico)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
+全球节点=NameRegex, FilterKey="^(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\bGAME\b)))).*$"
 
 [Proxy Group]
 # 手动策略组
-香港手动策略=select, 香港节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-台湾手动策略=select, 台湾节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-日本手动策略=select, 日本节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国手动策略=select, 韩国节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国手动策略=select, 新国节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-美国手动策略=select, 美国节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-游戏手动策略=select, 游戏节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png
-全球手动策略=select, 全球节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+香港手动策略=select, 香港全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾手动策略=select, 台湾全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本手动策略=select, 日本全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国手动策略=select, 韩国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国手动策略=select, 新国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国手动策略=select, 美国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+加拿大手动策略=select, 加拿大全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
+澳大利亚手动策略=select, 澳大利亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
+英国手动策略=select, 英国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
+德国手动策略=select, 德国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
+法国手动策略=select, 法国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png
+荷兰手动策略=select, 荷兰全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/NL.png
+意大利手动策略=select, 意大利全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IT.png
+西班牙手动策略=select, 西班牙全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/ES.png
+瑞典手动策略=select, 瑞典全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SE.png
+俄罗斯手动策略=select, 俄罗斯全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/RU.png
+土耳其手动策略=select, 土耳其全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TR.png
+阿联酋手动策略=select, 阿联酋全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AE.png
+泰国手动策略=select, 泰国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TH.png
+马来西亚手动策略=select, 马来西亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MY.png
+越南手动策略=select, 越南全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png
+印度手动策略=select, 印度全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IN.png
+巴西手动策略=select, 巴西全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/BR.png
+墨西哥手动策略=select, 墨西哥全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MX.png
+全球手动策略=select, 全球全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 # --------------------------------
 # 时延优选策略组
+全球-自动=url-test, 全球节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+AI-专项自动=url-test, 美国节点, 新国节点, 日本节点, 英国节点, 德国节点, 法国节点, 加拿大节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 香港时延优选=url-test, 香港节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 台湾时延优选=url-test, 台湾节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
 日本时延优选=url-test, 日本节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
 韩国时延优选=url-test, 韩国节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
 新国时延优选=url-test, 新国节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
 美国时延优选=url-test, 美国节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+加拿大时延优选=url-test, 加拿大节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
+澳大利亚时延优选=url-test, 澳大利亚节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
+英国时延优选=url-test, 英国节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
+德国时延优选=url-test, 德国节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
+法国时延优选=url-test, 法国节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png
+荷兰时延优选=url-test, 荷兰节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/NL.png
+意大利时延优选=url-test, 意大利节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IT.png
+西班牙时延优选=url-test, 西班牙节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/ES.png
+瑞典时延优选=url-test, 瑞典节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SE.png
+俄罗斯时延优选=url-test, 俄罗斯节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/RU.png
+土耳其时延优选=url-test, 土耳其节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TR.png
+阿联酋时延优选=url-test, 阿联酋节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AE.png
+泰国时延优选=url-test, 泰国节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TH.png
+马来西亚时延优选=url-test, 马来西亚节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MY.png
+越南时延优选=url-test, 越南节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png
+印度时延优选=url-test, 印度节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IN.png
+巴西时延优选=url-test, 巴西节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/BR.png
+墨西哥时延优选=url-test, 墨西哥节点, interval=60, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MX.png
 # --------------------------------
 # 兜底策略后备
-兜底后备策略=fallback, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, interval=60, max-timeout=2000, img-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
+兜底后备策略=fallback, 全球-自动, AI-专项自动, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, 加拿大时延优选, 英国时延优选, 德国时延优选, 法国时延优选, 澳大利亚时延优选, interval=60, max-timeout=2000, img-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
 
 [Rule]
 # 当配置文件中没有任何有效策略组时，Loon将使用内置的PROXY策略组
@@ -99,3 +179,4 @@ hostname=
 ca-p12=
 ca-passphrase=
 skip-server-cert-verify=false
+
