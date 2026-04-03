@@ -56,6 +56,7 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 巴西全部节点=NameRegex, FilterKey="^(?=.*((?i)🇧🇷|巴西|圣保罗|里约|(\b(BR|BRA|Brazil|Sao\s?Paulo|Rio)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 墨西哥全部节点=NameRegex, FilterKey="^(?=.*((?i)🇲🇽|墨西哥|墨城|(\b(MX|MEX|Mexico)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 全球全部节点=NameRegex, FilterKey="^(?=.*(.))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+CF全部节点=NameRegex, FilterKey="^(?=.*((?i)CF官方优选(\s*\d+)?))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 
 香港节点=NameRegex, FilterKey="^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong\s?Kong)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 台湾节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇼|台湾|台北|新北|台中|高雄|(\b(TW|TWN|Taiwan|Taipei)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
@@ -82,6 +83,7 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 巴西节点=NameRegex, FilterKey="^(?=.*((?i)🇧🇷|巴西|圣保罗|里约|(\b(BR|BRA|Brazil|Sao\s?Paulo|Rio)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 墨西哥节点=NameRegex, FilterKey="^(?=.*((?i)🇲🇽|墨西哥|墨城|(\b(MX|MEX|Mexico)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 全球节点=NameRegex, FilterKey="^(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+CF节点=NameRegex, FilterKey="^(?=.*((?i)CF官方优选(\s*\d+)?))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 
 [Proxy Group]
 # 时延优选策略组
@@ -93,55 +95,59 @@ AI时延优选=url-test, 美国节点, 新国节点, 日本节点, 英国节点,
 韩国时延优选=url-test, 韩国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
 新国时延优选=url-test, 新国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
 美国时延优选=url-test, 美国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-加拿大时延优选=url-test, 加拿大节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
-澳大利亚时延优选=url-test, 澳大利亚节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
-英国时延优选=url-test, 英国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
-德国时延优选=url-test, 德国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
-法国时延优选=url-test, 法国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png
-荷兰时延优选=url-test, 荷兰节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/NL.png
-意大利时延优选=url-test, 意大利节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IT.png
-西班牙时延优选=url-test, 西班牙节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/ES.png
-瑞典时延优选=url-test, 瑞典节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SE.png
-俄罗斯时延优选=url-test, 俄罗斯节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/RU.png
-土耳其时延优选=url-test, 土耳其节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TR.png
-阿联酋时延优选=url-test, 阿联酋节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AE.png
-泰国时延优选=url-test, 泰国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TH.png
-马来西亚时延优选=url-test, 马来西亚节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MY.png
-越南时延优选=url-test, 越南节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png
-印度时延优选=url-test, 印度节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IN.png
-巴西时延优选=url-test, 巴西节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/BR.png
-墨西哥时延优选=url-test, 墨西哥节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MX.png
+# 以下国家策略不常用，暂时注释保留
+# 加拿大时延优选=url-test, 加拿大节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
+# 澳大利亚时延优选=url-test, 澳大利亚节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
+# 英国时延优选=url-test, 英国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
+# 德国时延优选=url-test, 德国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
+# 法国时延优选=url-test, 法国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png
+# 荷兰时延优选=url-test, 荷兰节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/NL.png
+# 意大利时延优选=url-test, 意大利节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IT.png
+# 西班牙时延优选=url-test, 西班牙节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/ES.png
+# 瑞典时延优选=url-test, 瑞典节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SE.png
+# 俄罗斯时延优选=url-test, 俄罗斯节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/RU.png
+# 土耳其时延优选=url-test, 土耳其节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TR.png
+# 阿联酋时延优选=url-test, 阿联酋节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AE.png
+# 泰国时延优选=url-test, 泰国节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TH.png
+# 马来西亚时延优选=url-test, 马来西亚节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MY.png
+# 越南时延优选=url-test, 越南节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png
+# 印度时延优选=url-test, 印度节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IN.png
+# 巴西时延优选=url-test, 巴西节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/BR.png
+# 墨西哥时延优选=url-test, 墨西哥节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MX.png
+CF时延优选=url-test, CF节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 # --------------------------------
 # 兜底策略后备
-兜底后备策略=fallback, 全球-自动, AI-专项自动, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, 加拿大时延优选, 英国时延优选, 德国时延优选, 法国时延优选, 澳大利亚时延优选, interval=300, max-timeout=2000, img-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
+兜底后备策略=fallback, 全球-自动, AI-专项自动, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, CF时延优选, interval=300, max-timeout=2000, img-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
 # --------------------------------
 # 手动策略组
 全球手动策略=select, 全球全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
-AI手动策略=select, 美国手动策略, 新国手动策略, 日本手动策略, 英国手动策略, 德国手动策略, 法国手动策略, 加拿大手动策略, 全球手动策略, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+AI手动策略=select, 美国手动策略, 新国手动策略, 日本手动策略, 全球手动策略, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 香港手动策略=select, 香港全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 台湾手动策略=select, 台湾全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
 日本手动策略=select, 日本全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
 韩国手动策略=select, 韩国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
 新国手动策略=select, 新国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
 美国手动策略=select, 美国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-加拿大手动策略=select, 加拿大全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
-澳大利亚手动策略=select, 澳大利亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
-英国手动策略=select, 英国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
-德国手动策略=select, 德国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
-法国手动策略=select, 法国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png
-荷兰手动策略=select, 荷兰全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/NL.png
-意大利手动策略=select, 意大利全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IT.png
-西班牙手动策略=select, 西班牙全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/ES.png
-瑞典手动策略=select, 瑞典全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SE.png
-俄罗斯手动策略=select, 俄罗斯全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/RU.png
-土耳其手动策略=select, 土耳其全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TR.png
-阿联酋手动策略=select, 阿联酋全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AE.png
-泰国手动策略=select, 泰国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TH.png
-马来西亚手动策略=select, 马来西亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MY.png
-越南手动策略=select, 越南全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png
-印度手动策略=select, 印度全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IN.png
-巴西手动策略=select, 巴西全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/BR.png
-墨西哥手动策略=select, 墨西哥全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MX.png
+# 以下国家手动策略不常用，暂时注释保留
+# 加拿大手动策略=select, 加拿大全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
+# 澳大利亚手动策略=select, 澳大利亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
+# 英国手动策略=select, 英国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
+# 德国手动策略=select, 德国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
+# 法国手动策略=select, 法国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png
+# 荷兰手动策略=select, 荷兰全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/NL.png
+# 意大利手动策略=select, 意大利全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IT.png
+# 西班牙手动策略=select, 西班牙全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/ES.png
+# 瑞典手动策略=select, 瑞典全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SE.png
+# 俄罗斯手动策略=select, 俄罗斯全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/RU.png
+# 土耳其手动策略=select, 土耳其全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TR.png
+# 阿联酋手动策略=select, 阿联酋全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AE.png
+# 泰国手动策略=select, 泰国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TH.png
+# 马来西亚手动策略=select, 马来西亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MY.png
+# 越南手动策略=select, 越南全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/VN.png
+# 印度手动策略=select, 印度全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IN.png
+# 巴西手动策略=select, 巴西全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/BR.png
+# 墨西哥手动策略=select, 墨西哥全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/MX.png
+CF手动策略=select, CF全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 
 [Rule]
 # 当配置文件中没有任何有效策略组时，Loon将使用内置的PROXY策略组
