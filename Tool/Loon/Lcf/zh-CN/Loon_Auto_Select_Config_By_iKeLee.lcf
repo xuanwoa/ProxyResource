@@ -56,6 +56,7 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 巴西全部节点=NameRegex, FilterKey="^(?=.*((?i)🇧🇷|巴西|圣保罗|里约|(\b(BR|BRA|Brazil|Sao\s?Paulo|Rio)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 墨西哥全部节点=NameRegex, FilterKey="^(?=.*((?i)🇲🇽|墨西哥|墨城|(\b(MX|MEX|Mexico)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 全球全部节点=NameRegex, FilterKey="^(?=.*(.))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+全节点全部节点=NameRegex, FilterKey="^.*$"
 
 香港节点=NameRegex, FilterKey="^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong\s?Kong)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 台湾节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇼|台湾|台北|新北|台中|高雄|(\b(TW|TWN|Taiwan|Taipei)(\d+)?\b)))(?=.*((?i)((0(\.\d+)?|1(\.\d+)?)\s*[xX]|[xX]\s*(0(\.\d+)?|1(\.\d+)?)|(0(\.\d+)?|1(\.\d+)?)\s*(倍率|倍))))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
@@ -86,6 +87,7 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 [Proxy Group]
 # 时延优选策略组
 全球时延优选=url-test, 全球节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+全节点时延优选=url-test, 全节点全部节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 AI时延优选=url-test, 美国节点, 新国节点, 日本节点, 英国节点, 德国节点, 法国节点, 加拿大节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 香港时延优选=url-test, 香港节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 台湾时延优选=url-test, 台湾节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
@@ -117,8 +119,8 @@ AI时延优选=url-test, 美国节点, 新国节点, 日本节点, 英国节点,
 兜底后备策略=fallback, 全球-自动, AI-专项自动, 香港时延优选, 台湾时延优选, 日本时延优选, 韩国时延优选, 新国时延优选, 美国时延优选, interval=300, max-timeout=2000, img-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
 # --------------------------------
 # 手动策略组
-全球手动策略=select, 全球全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
-AI手动策略=select, 美国手动策略, 新国手动策略, 日本手动策略, 全球手动策略, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+全节点手动策略=select, 全球全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+AI手动策略=select, 美国手动策略, 新国手动策略, 日本手动策略, 全节点手动策略, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 香港手动策略=select, 香港全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 台湾手动策略=select, 台湾全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
 日本手动策略=select, 日本全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
@@ -156,7 +158,7 @@ FINAL, 兜底后备策略
 https://rule.kelee.one/Loon/Telegram.lsr, policy=兜底后备策略, tag=Telegram, enabled=true
 https://kelee.one/Tool/Loon/Lsr/TikTok.lsr, policy=新国手动策略, tag=TikTok, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI-专项手动策略, tag=AI, enabled=true
-https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr, policy=全球手动策略, tag=Speedtest Intl, enabled=true
+https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr, policy=全节点手动策略, tag=Speedtest Intl, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
@@ -182,6 +184,7 @@ hostname=
 ca-p12=
 ca-passphrase=
 skip-server-cert-verify=false
+
 
 
 
