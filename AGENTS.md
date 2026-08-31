@@ -51,9 +51,7 @@ Rules:
 
 Recent example:
 
-- PayPal routed through `英国手动策略` using blackmatrix7's PayPal Loon rule:
-  `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list, policy=英国手动策略, tag=PayPal, enabled=true`
-- Zopa/Freetrade/Plum/Tide/Yonder are grouped in `Tool/Loon/Rules/UKFinance.lsr`; PayPal remains a separate blackmatrix7 remote rule because it has a mature, large rule set.
+- PayPal/Zopa/Freetrade/Plum/Tide/Yonder are grouped in `Tool/Loon/Rules/UKFinance.lsr`; PayPal's many-domain rule block is vendored from blackmatrix7 with attribution.
 
 ## Git hygiene
 

@@ -48,13 +48,13 @@ Preferred remote-rule format:
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/<Service>/<Service>.list, policy=<策略组>, tag=<Service>, enabled=true
 ```
 
-For niche UK finance apps, prefer the grouped project rule file instead of one remote rule per app:
+For UK finance apps, prefer the grouped project rule file instead of one remote rule per app:
 
 ```ini
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UKFinance.lsr, policy=英国手动策略, tag=UK Finance, enabled=true
 ```
 
-Inside `UKFinance.lsr`, keep entries small and exact. Example:
+Inside `UKFinance.lsr`, keep niche app entries small and exact. PayPal is an exception: vendor the blackmatrix7 PayPal rule block with attribution because PayPal has many domains. Example:
 
 ```ini
 DOMAIN-SUFFIX,zopa.com
