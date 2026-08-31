@@ -131,7 +131,7 @@ AI手动策略=select, 美国手动策略, 新国手动策略, 日本手动策�
 # 以下国家手动策略不常用，暂时注释保留
 # 加拿大手动策略=select, 加拿大全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
 # 澳大利亚手动策略=select, 澳大利亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
-# 英国手动策略=select, 英国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
+英国手动策略=select, 英国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
 # 德国手动策略=select, 德国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
 # 法国手动策略=select, 法国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png
 # 荷兰手动策略=select, 荷兰全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/NL.png
@@ -153,10 +153,12 @@ AI手动策略=select, 美国手动策略, 新国手动策略, 日本手动策�
 # 当配置文件中存在有效的策略组时，内置的PROXY策略组将不再允许被调用，仅可使用用户配置的策略组
 # 配置文件已自带远程GEOIP, cn, DIRECT规则，请勿在此添加
 # 请勿修改远程CN REGION规则的排序甚至删除
+DOMAIN-SUFFIX,zopa.com,英国手动策略
 FINAL, 全节点手动策略
 
 [Remote Rule]
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list, policy=英国手动策略, tag=PayPal, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
 [Host]
