@@ -271,3 +271,9 @@ DOMAIN-SUFFIX,tide.co
 
 # Yonder
 DOMAIN-SUFFIX,yonder.com
+
+# Monzo
+DOMAIN-SUFFIX,monzo.com
+
+# Lloyds Bank
+DOMAIN-SUFFIX,lloydsbank.com
