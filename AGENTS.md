@@ -43,6 +43,7 @@ Accuracy/source preference:
 Rules:
 
 - Prefer `[Remote Rule]` references over copying hundreds of domains into `[Rule]`.
+- For small UK finance apps without mature public rules, group them in `Tool/Loon/Rules/UKFinance.lsr` and reference that single rule set from `[Remote Rule]` with `policy=英国手动策略`.
 - Do not mix multiple rule sources for the same service unless debugging a concrete miss.
 - Be careful with broad categories such as Apple, Google, and Microsoft; prefer specific services where possible.
 - Keep `FINAL, 全节点手动策略` unless explicitly told otherwise.
@@ -52,8 +53,7 @@ Recent example:
 
 - PayPal routed through `英国手动策略` using blackmatrix7's PayPal Loon rule:
   `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list, policy=英国手动策略, tag=PayPal, enabled=true`
-- Zopa had no mature popular Loon rule set found, so use a minimal local rule:
-  `DOMAIN-SUFFIX,zopa.com,英国手动策略`
+- Zopa/Freetrade/Plum/Tide/Yonder are grouped in `Tool/Loon/Rules/UKFinance.lsr`; PayPal remains a separate blackmatrix7 remote rule because it has a mature, large rule set.
 
 ## Git hygiene
 

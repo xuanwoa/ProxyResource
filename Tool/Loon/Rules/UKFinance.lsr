@@ -1,0 +1,21 @@
+# NAME: UKFinance
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# UPDATED: 2026-08-31
+# DESCRIPTION: UK finance apps routed through 英国手动策略 from the main Loon config.
+# NOTE: Keep this list small. Add official/app domains first; add third-party KYC/risk domains only after Loon connection-log evidence.
+
+# Zopa
+DOMAIN-SUFFIX,zopa.com
+
+# Freetrade
+DOMAIN-SUFFIX,freetrade.io
+
+# Plum
+DOMAIN-SUFFIX,withplum.com
+
+# Tide
+DOMAIN-SUFFIX,tide.co
+
+# Yonder
+DOMAIN-SUFFIX,yonder.com

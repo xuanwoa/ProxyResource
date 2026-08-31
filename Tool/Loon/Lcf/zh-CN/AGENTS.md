@@ -39,7 +39,8 @@ Use this order of preference:
 
 1. Popular maintained Loon rule source: `blackmatrix7/ios_rule_script`.
 2. kelee/luestr `.lsr` source when already used by this config style.
-3. Minimal local `DOMAIN-SUFFIX` / `DOMAIN` rule when no mature service-specific rule exists.
+3. Project-owned grouped rule files such as `Tool/Loon/Rules/UKFinance.lsr` for several small related services sharing one policy.
+4. Minimal local `DOMAIN-SUFFIX` / `DOMAIN` rule when no mature service-specific rule exists and grouping is not worthwhile.
 
 Preferred remote-rule format:
 
@@ -47,10 +48,16 @@ Preferred remote-rule format:
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/<Service>/<Service>.list, policy=<策略组>, tag=<Service>, enabled=true
 ```
 
-For niche finance apps, keep local patches small and exact. Example:
+For niche UK finance apps, prefer the grouped project rule file instead of one remote rule per app:
 
 ```ini
-DOMAIN-SUFFIX,zopa.com,英国手动策略
+https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UKFinance.lsr, policy=英国手动策略, tag=UK Finance, enabled=true
+```
+
+Inside `UKFinance.lsr`, keep entries small and exact. Example:
+
+```ini
+DOMAIN-SUFFIX,zopa.com
 ```
 
 ## Placement
