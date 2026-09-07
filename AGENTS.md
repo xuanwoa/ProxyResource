@@ -17,7 +17,7 @@ Do not modify other Loon config files, generated assets, or unrelated repository
 3. Apply small targeted patches. Do not rewrite the whole `.lcf`.
 4. Compare upstream only for reference. Do not whole-file merge `luestr/ProxyResource` into this customized file.
 5. After edits, verify the exact lines changed and run `git diff -- Tool/Loon/Lcf/zh-CN/Loon_Auto_Select_Config_By_iKeLee.lcf AGENTS.md Tool/Loon/Lcf/zh-CN/AGENTS.md`.
-6. If the user says "提交", make a scoped commit containing only the relevant files. If the user says "推送", push after commit.
+6. For Loon rule additions/changes requested by xuanwoa, make a scoped commit containing only the relevant files and push by default after verification, unless the user explicitly says not to commit/push or is only asking for a plan.
 
 ## Current Loon steady state
 

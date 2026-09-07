@@ -75,3 +75,8 @@ After editing, verify with file search or equivalent:
 - `FINAL, 全节点手动策略` still exists.
 - No unintended TG/TikTok/AI/Speedtest bundle was added.
 - `git diff` contains only intended changes.
+
+## Commit/push default
+
+- For Loon rule additions/changes requested by xuanwoa, commit the scoped files and push after verification by default.
+- Do not commit/push when the user explicitly says not to, or when they are only asking for a plan/review.
