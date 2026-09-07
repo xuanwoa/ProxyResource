@@ -1,7 +1,7 @@
 # NAME: UKFinance
 # AUTHOR: xuanwoa
 # REPO: https://github.com/xuanwoa/ProxyResource
-# UPDATED: 2026-08-31
+# UPDATED: 2026-09-07
 # DESCRIPTION: UK finance services routed through 英国手动策略 from the main Loon config.
 # NOTE: Keep first-party app entries small. PayPal rules are vendored from blackmatrix7 because PayPal has many domains.
 
@@ -278,3 +278,6 @@ DOMAIN-SUFFIX,monzo.com
 # Lloyds Bank
 DOMAIN-SUFFIX,lloydsbank.com
 DOMAIN-SUFFIX,lloydsbank.co.uk
+
+# Altery
+DOMAIN-SUFFIX,altery.com
