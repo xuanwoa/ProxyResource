@@ -292,3 +292,7 @@ DOMAIN-SUFFIX,trading212.com
 # ClearScore
 # Source: https://www.clearscore.com/
 DOMAIN-SUFFIX,clearscore.com
+
+# Credit Karma UK
+# Source: https://www.creditkarma.co.uk/
+DOMAIN-SUFFIX,creditkarma.co.uk
