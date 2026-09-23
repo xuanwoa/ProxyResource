@@ -296,3 +296,7 @@ DOMAIN-SUFFIX,clearscore.com
 # Credit Karma UK
 # Source: https://www.creditkarma.co.uk/
 DOMAIN-SUFFIX,creditkarma.co.uk
+
+# Experian UK
+# Source: https://www.experian.co.uk/
+DOMAIN-SUFFIX,experian.co.uk
