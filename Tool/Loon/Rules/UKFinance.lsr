@@ -300,3 +300,7 @@ DOMAIN-SUFFIX,creditkarma.co.uk
 # Experian UK
 # Source: https://www.experian.co.uk/
 DOMAIN-SUFFIX,experian.co.uk
+
+# TopCashback UK
+# Source: https://www.topcashback.co.uk/
+DOMAIN-SUFFIX,topcashback.co.uk
