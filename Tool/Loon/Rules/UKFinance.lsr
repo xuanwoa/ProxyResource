@@ -275,6 +275,7 @@ DOMAIN-SUFFIX,yondercard.com
 
 # Monzo
 DOMAIN-SUFFIX,monzo.com
+DOMAIN,monzo.statuspage.io
 
 # Lloyds Bank
 DOMAIN-SUFFIX,lloydsbank.com
