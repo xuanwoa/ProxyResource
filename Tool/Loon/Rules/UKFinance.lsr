@@ -305,3 +305,6 @@ DOMAIN-SUFFIX,experian.co.uk
 # TopCashback UK
 # Source: https://www.topcashback.co.uk/
 DOMAIN-SUFFIX,topcashback.co.uk
+
+# WorldFirst
+DOMAIN-SUFFIX,worldfirst.com
