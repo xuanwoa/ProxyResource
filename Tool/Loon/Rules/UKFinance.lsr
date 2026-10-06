@@ -312,3 +312,7 @@ DOMAIN-SUFFIX,worldfirst.com
 # Stripe
 # Source: https://stripe.com/
 DOMAIN-SUFFIX,stripe.com
+
+# LemFi
+# Source: https://lemfi.com/
+DOMAIN-SUFFIX,lemfi.com
