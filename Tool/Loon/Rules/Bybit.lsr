@@ -1,0 +1,10 @@
+# NAME: Bybit
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# UPDATED: 2026-10-10
+# DESCRIPTION: Bybit services routed through 韩国手动策略 from the main Loon config.
+
+# Bybit
+DOMAIN-SUFFIX,bybit.biz
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bybitx.global
