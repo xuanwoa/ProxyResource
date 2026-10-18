@@ -320,3 +320,7 @@ DOMAIN-SUFFIX,lemfi.com
 # Chase UK
 # Source: https://www.chase.co.uk/
 DOMAIN-SUFFIX,chase.co.uk
+
+# Ria Money Transfer
+# Source: https://www.riamoneytransfer.com/
+DOMAIN-SUFFIX,riamoneytransfer.com
