@@ -1,0 +1,8 @@
+# NAME: Bunq
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# UPDATED: 2026-10-19
+# DESCRIPTION: bunq services routed directly from the main Loon config.
+
+# bunq
+DOMAIN-SUFFIX,bunq.com
