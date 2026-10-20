@@ -1,0 +1,10 @@
+# NAME: GermanyFinance
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# UPDATED: 2026-10-20
+# DESCRIPTION: Germany finance services routed through 德国手动策略 from the main Loon config.
+# NOTE: Keep first-party app entries small and exact.
+
+# Paysafecard
+# Source: https://www.paysafecard.com/
+DOMAIN-SUFFIX,paysafecard.com

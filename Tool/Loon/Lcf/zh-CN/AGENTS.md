@@ -39,7 +39,7 @@ Use this order of preference:
 
 1. Popular maintained Loon rule source: `blackmatrix7/ios_rule_script`.
 2. kelee/luestr `.lsr` source when already used by this config style.
-3. Project-owned grouped rule files such as `Tool/Loon/Rules/UKFinance.lsr` for several small related services sharing one policy.
+3. Project-owned country-specific rule files such as `Tool/Loon/Rules/UKFinance.lsr` or `GermanyFinance.lsr`; use this remote-rule pattern even for one small service or one domain when it needs a country manual policy.
 4. Minimal local `DOMAIN-SUFFIX` / `DOMAIN` rule when no mature service-specific rule exists and grouping is not worthwhile.
 
 Preferred remote-rule format:

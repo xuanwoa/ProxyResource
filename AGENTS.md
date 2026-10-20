@@ -43,7 +43,7 @@ Accuracy/source preference:
 Rules:
 
 - Prefer `[Remote Rule]` references over copying hundreds of domains into `[Rule]`.
-- For small UK finance apps without mature public rules, group them in `Tool/Loon/Rules/UKFinance.lsr` and reference that single rule set from `[Remote Rule]` with `policy=英国手动策略`.
+- For small finance services that need a country-specific manual policy, group them in a project-owned country rule file (for example `Tool/Loon/Rules/UKFinance.lsr` or `GermanyFinance.lsr`) and reference it from `[Remote Rule]` with the matching country policy; do not add a one-off local `[Rule]` entry for this class, even when it is only one domain.
 - Do not mix multiple rule sources for the same service unless debugging a concrete miss.
 - Be careful with broad categories such as Apple, Google, and Microsoft; prefer specific services where possible.
 - Keep `FINAL, 全节点手动策略` unless explicitly told otherwise.
