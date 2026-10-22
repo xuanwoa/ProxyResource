@@ -1,0 +1,10 @@
+# NAME: USFinance
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# UPDATED: 2026-10-22
+# DESCRIPTION: US finance services routed through 美国手动策略 from the main Loon config.
+# NOTE: Keep first-party app entries small and exact.
+
+# MAJORITY
+# Source: https://majority.com/
+DOMAIN-SUFFIX,majority.com

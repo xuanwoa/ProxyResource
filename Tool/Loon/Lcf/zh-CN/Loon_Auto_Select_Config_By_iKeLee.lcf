@@ -127,7 +127,7 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 # 日本手动策略=select, 日本全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
 韩国手动策略=select, 韩国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
 # 新国手动策略=select, 新国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-# 美国手动策略=select, 美国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+美国手动策略=select, 美国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
 # 以下国家手动策略不常用，暂时注释保留
 # 加拿大手动策略=select, 加拿大全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
 # 澳大利亚手动策略=select, 澳大利亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
@@ -159,6 +159,7 @@ FINAL, 全节点手动策略
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UKFinance.lsr, policy=英国手动策略, tag=UK Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/GermanyFinance.lsr, policy=德国手动策略, tag=Germany Finance, enabled=true
+https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/USFinance.lsr, policy=美国手动策略, tag=US Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Bunq.lsr, policy=DIRECT, tag=Bunq, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Bybit.lsr, policy=韩国手动策略, tag=Bybit, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
