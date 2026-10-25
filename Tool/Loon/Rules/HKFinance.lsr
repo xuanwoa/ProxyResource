@@ -1,0 +1,72 @@
+# NAME: HKFinance
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# UPDATED: 2026-10-25
+# DESCRIPTION: Hong Kong finance services routed directly from the main Loon config.
+# NOTE: Keep first-party service domains small and exact.
+
+# FSMOne / FSM Global（奕丰金融）
+# Sources: https://www.fsmglobal.hk/ · https://fsm.global/sg/support/online-security · https://www.ifastcorp.com/ifastcorp/articleFiles/webarticles/14690/SG/ifast-Scam_Advisory-202606.html · https://www.ifastgb.com/assets/static-file/investor-relations/iFAST%20Corp_Annual%20Report%202022_20230404.pdf
+DOMAIN-SUFFIX,fsmglobal.hk
+DOMAIN-SUFFIX,fsmone.com.hk
+DOMAIN-SUFFIX,fundsupermart.com.hk
+DOMAIN-SUFFIX,fsm.global
+DOMAIN-SUFFIX,fsmglobal.sg
+DOMAIN-SUFFIX,fsmone.com
+DOMAIN-SUFFIX,fundsupermart.com
+DOMAIN-SUFFIX,fsmone.com.my
+DOMAIN-SUFFIX,ifastcorp.com
+DOMAIN-SUFFIX,ifastgb.com
+
+# HSBC Hong Kong
+# Source: https://www.hsbc.com.hk/
+DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,hsbc.com.mo
+DOMAIN-SUFFIX,hsbc.com
+
+# ZA Bank
+# Source: https://bank.za.group/
+DOMAIN-SUFFIX,za.group
+
+# Ant Bank（Hong Kong / Macau）
+# Sources: https://www.antbank.hk/ · https://www.antbank.mo/
+DOMAIN-SUFFIX,antbank.hk
+DOMAIN-SUFFIX,antbank.mo
+
+# Hang Seng Hong Kong / Hang Seng Investment Express
+# Source: https://www.hangseng.com/zh-hk/personal/banking/overseas-transfer-website/
+DOMAIN-SUFFIX,hangseng.com
+
+# BOCHK
+# Source: https://www.bochk.com/tc/home.html
+DOMAIN-SUFFIX,bochk.com
+
+# China Construction Bank（Asia / Macau）
+# Source: https://www.asia.ccb.com/
+DOMAIN-SUFFIX,ccb.com
+
+# China CITIC Bank International（inMotion）
+# Source: https://www.cncbinternational.com/
+DOMAIN-SUFFIX,cncbinternational.com
+
+# Ping An Digital Bank（formerly PAObank）
+# Sources: https://www.pingandb.com/tc/faq.html · https://www.paob.com.hk/
+DOMAIN-SUFFIX,pingandb.com
+DOMAIN-SUFFIX,paob.com.hk
+
+# Fosun Wealth
+# Sources: https://www.fosunwealth.hk/ · https://www.fotechwealth.com.cn/
+DOMAIN-SUFFIX,fosunwealth.hk
+DOMAIN-SUFFIX,fosunwealth.com
+DOMAIN-SUFFIX,fotechwealth.com.cn
+
+# uSMART
+# Source: https://hk.usmartglobal.com/zh-hk
+DOMAIN-SUFFIX,usmartglobal.com
+DOMAIN-SUFFIX,usmart.hk
+DOMAIN-SUFFIX,usmart.sg
+
+# Chief Group
+# Source: https://www.chiefgroup.com.hk/
+DOMAIN-SUFFIX,chiefgroup.com.hk
+DOMAIN-SUFFIX,chieftrade.com
