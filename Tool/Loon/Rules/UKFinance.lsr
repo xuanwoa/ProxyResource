@@ -1,7 +1,7 @@
 # NAME: UKFinance
 # AUTHOR: xuanwoa
 # REPO: https://github.com/xuanwoa/ProxyResource
-# UPDATED: 2026-10-11
+# UPDATED: 2026-10-26
 # DESCRIPTION: UK finance services routed through 英国手动策略 from the main Loon config.
 # NOTE: Keep first-party app entries small. PayPal rules are vendored from blackmatrix7 because PayPal has many domains.
 
@@ -301,6 +301,10 @@ DOMAIN-SUFFIX,creditkarma.co.uk
 # Experian UK
 # Source: https://www.experian.co.uk/
 DOMAIN-SUFFIX,experian.co.uk
+
+# Equifax UK
+# Source: https://equifax.co.uk/
+DOMAIN-SUFFIX,equifax.co.uk
 
 # TopCashback UK
 # Source: https://www.topcashback.co.uk/
