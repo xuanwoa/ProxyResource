@@ -1,0 +1,9 @@
+# NAME: XiaoHongShu
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# DESCRIPTION: Temporary Xiaohongshu domains routed through 英国手动策略.
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/XiaoHongShu/XiaoHongShu.list
+DOMAIN-SUFFIX,fengkongcloud.com
+DOMAIN-SUFFIX,xhscdn.com
+DOMAIN-SUFFIX,xhscdn.net
+DOMAIN-SUFFIX,xiaohongshu.com

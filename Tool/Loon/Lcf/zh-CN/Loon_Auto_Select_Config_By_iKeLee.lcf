@@ -158,6 +158,7 @@ FINAL, 全节点手动策略
 [Remote Rule]
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UKFinance.lsr, policy=英国手动策略, tag=UK Finance, enabled=true
+https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/XiaoHongShu.lsr, policy=英国手动策略, tag=XiaoHongShu, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/GermanyFinance.lsr, policy=德国手动策略, tag=Germany Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/USFinance.lsr, policy=美国手动策略, tag=US Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/HKFinance.lsr, policy=DIRECT, tag=Hong Kong Finance, enabled=true
