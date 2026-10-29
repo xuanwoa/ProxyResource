@@ -1,7 +1,7 @@
 # NAME: HKFinance
 # AUTHOR: xuanwoa
 # REPO: https://github.com/xuanwoa/ProxyResource
-# UPDATED: 2026-10-25
+# UPDATED: 2026-10-29
 # DESCRIPTION: Hong Kong finance services routed directly from the main Loon config.
 # NOTE: Keep first-party service domains small and exact.
 
@@ -54,19 +54,24 @@ DOMAIN-SUFFIX,cncbinternational.com
 DOMAIN-SUFFIX,pingandb.com
 DOMAIN-SUFFIX,paob.com.hk
 
-# Fosun Wealth
-# Sources: https://www.fosunwealth.hk/ · https://www.fotechwealth.com.cn/
+# Fosun Wealth / Star Wealth
+# Sources: https://www.fosunwealth.com/ · https://www.fosunwealth.hk/ · https://www.fotechwealth.com.cn/ · https://h5.fotechwealth.com/m/?from=fosunwealth&langType=zhCn · https://apk.fosunhanig.com/download/fosunwealth-app.apk
 DOMAIN-SUFFIX,fosunwealth.hk
 DOMAIN-SUFFIX,fosunwealth.com
+DOMAIN-SUFFIX,fosunwealth.cn
 DOMAIN-SUFFIX,fotechwealth.com.cn
+DOMAIN-SUFFIX,fotechwealth.com
+DOMAIN-SUFFIX,fosunhanig.com
 
-# uSMART
-# Source: https://hk.usmartglobal.com/zh-hk
+# uSMART / 盈立证券
+# Sources: https://hk.usmartglobal.com/zh-hk · https://www.usmartsecurities.com/zh-hk/about-us/contact-us · https://usmart.hk/en/about-us/media-centre/detail/10086 · https://hk.usmartglobal.com/en/help-centre/40/detail/10121
 DOMAIN-SUFFIX,usmartglobal.com
 DOMAIN-SUFFIX,usmart.hk
-DOMAIN-SUFFIX,usmart.sg
+DOMAIN-SUFFIX,usmartsecurities.com
+DOMAIN-SUFFIX,usmart8.com
+DOMAIN-SUFFIX,usmart66.com
 
-# Chief Group
-# Source: https://www.chiefgroup.com.hk/
+# Chief Group / 致富证券
+# Sources: https://www.chiefgroup.com.hk/ · https://www.chiefgroup.com.hk/hk/cas · https://chiefgroup.com.hk/en/home/index
 DOMAIN-SUFFIX,chiefgroup.com.hk
 DOMAIN-SUFFIX,chieftrade.com
