@@ -328,3 +328,10 @@ DOMAIN-SUFFIX,chase.co.uk
 # Ria Money Transfer
 # Source: https://www.riamoneytransfer.com/
 DOMAIN-SUFFIX,riamoneytransfer.com
+
+# 小红书
+# Source: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/XiaoHongShu/XiaoHongShu.list
+DOMAIN-SUFFIX,fengkongcloud.com
+DOMAIN-SUFFIX,xhscdn.com
+DOMAIN-SUFFIX,xhscdn.net
+DOMAIN-SUFFIX,xiaohongshu.com
