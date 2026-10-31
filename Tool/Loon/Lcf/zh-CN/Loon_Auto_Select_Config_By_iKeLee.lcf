@@ -163,6 +163,7 @@ https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Ger
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/USFinance.lsr, policy=美国手动策略, tag=US Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/HKFinance.lsr, policy=DIRECT, tag=Hong Kong Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Bunq.lsr, policy=DIRECT, tag=Bunq, enabled=true
+https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/WLOC.lsr, policy=全节点手动策略, tag=WLOC, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Bybit.lsr, policy=韩国手动策略, tag=Bybit, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 

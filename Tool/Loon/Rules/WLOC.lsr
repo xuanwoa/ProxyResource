@@ -1,0 +1,10 @@
+# NAME: WLOC
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# DESCRIPTION: Apple WLOC exact endpoints routed through 全节点手动策略 to avoid CN REGION GEOIP direct matching.
+
+DOMAIN,gs-loc.apple.com
+DOMAIN,gs-loc-cn.apple.com
+DOMAIN,gsp-ssl.ls.apple.com
+DOMAIN,bluedot.is.autonavi.com
+DOMAIN,bluedot.is.autonavi.com.gds.alibabadns.com
