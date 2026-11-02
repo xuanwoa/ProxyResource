@@ -3,7 +3,15 @@
 # REPO: https://github.com/xuanwoa/ProxyResource
 # UPDATED: 2026-11-02
 # DESCRIPTION: US service domains routed through 美国手动策略 from the main Loon config.
-# NOTE: Keep explicitly requested first-party domains small and exact.
+# NOTE: Keep first-party service domains small and exact.
+
+# MAJORITY
+# Source: https://majority.com/
+DOMAIN-SUFFIX,majority.com
+
+# Pangea Money Transfer
+# Source: https://pangeamoneytransfer.com/
+DOMAIN-SUFFIX,pangeamoneytransfer.com
 
 # Muse AI
 # Source: https://muse.ai/
