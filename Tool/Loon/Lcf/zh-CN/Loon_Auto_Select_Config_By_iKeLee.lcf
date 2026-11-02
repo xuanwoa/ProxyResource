@@ -37,7 +37,6 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 韩国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇰🇷|韩国|韓|首尔|釜山|仁川|(\b(KR|KOR|Korea|Seoul)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 新国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇸🇬|新加坡|狮城|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 美国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇺🇸|美国|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|波特兰|(\b(US|USA|United\s?States|America|Los\s?Angeles|San\s?Jose)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-美国家宽节点=NameRegex, FilterKey="^(?=.*((?i)🇺🇸|美国|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|波特兰|(\b(US|USA|United\s?States|America|Los\s?Angeles|San\s?Jose)(\d+)?\b)))(?=.*((?i)家宽|家庭宽带|住宅|Residential|Home\s?Broadband|\bISP\b))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 加拿大全部节点=NameRegex, FilterKey="^(?=.*((?i)🇨🇦|加拿大|温哥华|多伦多|蒙特利尔|(\b(CA|CAN|Canada|Vancouver|Toronto)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 澳大利亚全部节点=NameRegex, FilterKey="^(?=.*((?i)🇦🇺|澳大利亚|澳洲|悉尼|墨尔本|珀斯|(\b(AU|AUS|Australia|Sydney|Melbourne)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 英国全部节点=NameRegex, FilterKey="^(?=.*((?i)🇬🇧|英国|伦敦|曼彻斯特|(\b(UK|GB|GBR|United\s?Kingdom|Britain|London)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
@@ -129,7 +128,6 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 韩国手动策略=select, 韩国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
 # 新国手动策略=select, 新国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
 美国手动策略=select, 美国全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-美国家宽策略=select, 美国家宽节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
 # 以下国家手动策略不常用，暂时注释保留
 # 加拿大手动策略=select, 加拿大全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/CA.png
 # 澳大利亚手动策略=select, 澳大利亚全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/AU.png
@@ -163,7 +161,7 @@ https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UKF
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/XiaoHongShu.lsr, policy=英国手动策略, tag=XiaoHongShu, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/GermanyFinance.lsr, policy=德国手动策略, tag=Germany Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/USFinance.lsr, policy=美国手动策略, tag=US Finance, enabled=true
-https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/USHomeBroadband.lsr, policy=美国家宽策略, tag=US Home Broadband, enabled=true
+https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Muse.lsr, policy=美国手动策略, tag=Muse, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/HKFinance.lsr, policy=DIRECT, tag=Hong Kong Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Bunq.lsr, policy=DIRECT, tag=Bunq, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/WLOC.lsr, policy=全节点手动策略, tag=WLOC, enabled=true
