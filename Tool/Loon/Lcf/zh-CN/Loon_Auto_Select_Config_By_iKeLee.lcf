@@ -161,7 +161,7 @@ https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UKF
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/XiaoHongShu.lsr, policy=英国手动策略, tag=XiaoHongShu, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/GermanyFinance.lsr, policy=德国手动策略, tag=Germany Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/USFinance.lsr, policy=美国手动策略, tag=US Finance, enabled=true
-https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Muse.lsr, policy=美国手动策略, tag=Muse, enabled=true
+https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/US.lsr, policy=美国手动策略, tag=US, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/HKFinance.lsr, policy=DIRECT, tag=Hong Kong Finance, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Bunq.lsr, policy=DIRECT, tag=Bunq, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/WLOC.lsr, policy=全节点手动策略, tag=WLOC, enabled=true
