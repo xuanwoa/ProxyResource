@@ -1,0 +1,10 @@
+# NAME: USHomeBroadband
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# UPDATED: 2026-11-02
+# DESCRIPTION: muse.ai routed through 美国家宽策略 from the main Loon config.
+# NOTE: Keep explicitly requested first-party domains small and exact.
+
+# Muse AI
+# Source: https://muse.ai/
+DOMAIN-SUFFIX,muse.ai
