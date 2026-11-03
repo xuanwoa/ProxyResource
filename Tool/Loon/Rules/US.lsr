@@ -2,7 +2,7 @@
 # AUTHOR: xuanwoa
 # REPO: https://github.com/xuanwoa/ProxyResource
 # UPDATED: 2026-11-02
-# DESCRIPTION: US service and Gemini domains routed through 美国手动策略 from the main Loon config.
+# DESCRIPTION: US service domains routed through 美国手动策略 from the main Loon config.
 # NOTE: Keep first-party service domains small and exact.
 
 # MAJORITY
@@ -12,24 +12,3 @@ DOMAIN-SUFFIX,majority.com
 # Pangea Money Transfer
 # Source: https://pangeamoneytransfer.com/
 DOMAIN-SUFFIX,pangeamoneytransfer.com
-
-# Muse AI
-# Source: https://muse.ai/
-DOMAIN-SUFFIX,muse.ai
-
-# Gemini
-# Source: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Gemini/Gemini.list
-# Upstream updated: 2025-06-06 09:20:02
-DOMAIN,ai.google.dev
-DOMAIN,alkalimakersuite-pa.clients6.google.com
-DOMAIN,makersuite.google.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,deepmind.google
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-DOMAIN-SUFFIX,apis.google.com
-DOMAIN-KEYWORD,colab
-DOMAIN-KEYWORD,developerprofiles
-DOMAIN-KEYWORD,generativelanguage
