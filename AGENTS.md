@@ -43,7 +43,7 @@ Accuracy/source preference:
 Rules:
 
 - Prefer `[Remote Rule]` references over copying hundreds of domains into `[Rule]`.
-- For small finance services that need a country-specific manual policy, group them in a project-owned country rule file (for example `Tool/Loon/Rules/UKFinance.lsr` or `GermanyFinance.lsr`) and reference it from `[Remote Rule]` with the matching country policy; do not add a one-off local `[Rule]` entry for this class, even when it is only one domain.
+- For small finance services that need a country-specific manual policy, group them in a project-owned country rule file (for example `Tool/Loon/Rules/UK.lsr` or `DE.lsr`) and reference it from `[Remote Rule]` with the matching country policy; do not add a one-off local `[Rule]` entry for this class, even when it is only one domain.
 - Do not mix multiple rule sources for the same service unless debugging a concrete miss.
 - Be careful with broad categories such as Apple, Google, and Microsoft; prefer specific services where possible.
 - Keep `FINAL, 全节点手动策略` unless explicitly told otherwise.
@@ -51,7 +51,7 @@ Rules:
 
 Recent example:
 
-- PayPal/Zopa/Freetrade/Plum/Tide/Yonder are grouped in `Tool/Loon/Rules/UKFinance.lsr`; PayPal's many-domain rule block is vendored from blackmatrix7 with attribution.
+- PayPal/Zopa/Freetrade/Plum/Tide/Yonder are grouped in `Tool/Loon/Rules/UK.lsr`; PayPal's many-domain rule block is vendored from blackmatrix7 with attribution.
 
 ## Git hygiene
 

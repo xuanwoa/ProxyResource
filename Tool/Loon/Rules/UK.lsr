@@ -1,8 +1,8 @@
-# NAME: UKFinance
+# NAME: UK
 # AUTHOR: xuanwoa
 # REPO: https://github.com/xuanwoa/ProxyResource
 # UPDATED: 2026-10-26
-# DESCRIPTION: UK finance services routed through 英国手动策略 from the main Loon config.
+# DESCRIPTION: UK financial services routed through 英国手动策略 from the main Loon config.
 # NOTE: Keep first-party app entries small. PayPal rules are vendored from blackmatrix7 because PayPal has many domains.
 
 # PayPal

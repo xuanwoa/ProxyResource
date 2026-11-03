@@ -39,7 +39,7 @@ Use this order of preference:
 
 1. Popular maintained Loon rule source: `blackmatrix7/ios_rule_script`.
 2. kelee/luestr `.lsr` source when already used by this config style.
-3. Project-owned country-specific rule files such as `Tool/Loon/Rules/UKFinance.lsr` or `GermanyFinance.lsr`; use this remote-rule pattern even for one small service or one domain when it needs a country manual policy.
+3. Project-owned country-specific rule files such as `Tool/Loon/Rules/UK.lsr` or `Tool/Loon/Rules/DE.lsr`; use this remote-rule pattern even for one small service or one domain when it needs a country manual policy.
 4. Minimal local `DOMAIN-SUFFIX` / `DOMAIN` rule when no mature service-specific rule exists and grouping is not worthwhile.
 
 Preferred remote-rule format:
@@ -51,10 +51,10 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 For UK finance apps, prefer the grouped project rule file instead of one remote rule per app:
 
 ```ini
-https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UKFinance.lsr, policy=英国手动策略, tag=UK Finance, enabled=true
+https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UK.lsr, policy=英国手动策略, tag=UK, enabled=true
 ```
 
-Inside `UKFinance.lsr`, keep niche app entries small and exact. PayPal is an exception: vendor the blackmatrix7 PayPal rule block with attribution because PayPal has many domains. Example:
+Inside `UK.lsr`, keep niche app entries small and exact. PayPal is an exception: vendor the blackmatrix7 PayPal rule block with attribution because PayPal has many domains. Example:
 
 ```ini
 DOMAIN-SUFFIX,zopa.com

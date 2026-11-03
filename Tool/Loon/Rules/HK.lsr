@@ -1,8 +1,8 @@
-# NAME: HKFinance
+# NAME: HK
 # AUTHOR: xuanwoa
 # REPO: https://github.com/xuanwoa/ProxyResource
 # UPDATED: 2026-10-29
-# DESCRIPTION: Hong Kong finance services routed directly from the main Loon config.
+# DESCRIPTION: Hong Kong financial services routed directly from the main Loon config.
 # NOTE: Keep first-party service domains small and exact.
 
 # FSMOne / FSM Global（奕丰金融）
