@@ -1,0 +1,10 @@
+# NAME: PH
+# AUTHOR: xuanwoa
+# REPO: https://github.com/xuanwoa/ProxyResource
+# UPDATED: 2026-11-05
+# DESCRIPTION: MEXC routed through 菲律宾手动策略 from the main Loon config.
+# NOTE: Keep first-party service domains small and exact.
+
+# MEXC
+# Source: https://www.mexc.com/
+DOMAIN-SUFFIX,mexc.com

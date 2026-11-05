@@ -31,6 +31,7 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 [Remote Proxy]
 
 [Remote Filter]
+菲律宾全部节点=NameRegex, FilterKey="^(?=.*((?i)🇵🇭|菲律宾|马尼拉|宿务|PHL|MNL|Philippines|Manila|Cebu|(?<![A-Za-z])PH(?![A-Za-z])))(?!.*((?i)回国|校园|游戏|🎮|GAME)).*$"
 香港全部节点=NameRegex, FilterKey="^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong\s?Kong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 台湾全部节点=NameRegex, FilterKey="^(?=.*((?i)🇹🇼|台湾|台北|新北|台中|高雄|(\b(TW|TWN|Taiwan|Taipei)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 日本全部节点=NameRegex, FilterKey="^(?=.*((?i)🇯🇵|日本|樱花|东京|大阪|泉日|川日|埼玉|名古屋|福冈|北海道|(\b(JP|JPN|Japan|Tokyo|Osaka)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
@@ -87,6 +88,7 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 [Proxy Group]
 # 手动策略组（首位 / 默认）
 全节点手动策略=select, 全球全部节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+菲律宾手动策略=select, 菲律宾全部节点
 # 时延优选策略组（暂不常用，注释保留，日后可按需启用）
 # 全球时延优选=url-test, 全球节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 # 全节点时延优选=url-test, 全节点全部节点, interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
@@ -156,6 +158,7 @@ bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12
 FINAL, 全节点手动策略
 
 [Remote Rule]
+https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/PH.lsr, policy=菲律宾手动策略, tag=PH, enabled=true
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
 https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list, policy=美国手动策略, tag=AI, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/UK.lsr, policy=英国手动策略, tag=UK, enabled=true
