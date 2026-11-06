@@ -76,6 +76,7 @@ policy_groups:
         - 机场节点池
       flatten: true
       filter: '^(?=.*((?i)🇵🇭|菲律宾|马尼拉|宿务|PHL|MNL|Philippines|Manila|Cebu|(?<![A-Za-z])PH(?![A-Za-z])))(?!.*((?i)回国|校园|游戏|🎮|GAME)).*$'
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PH.png
   - select:
       name: 韩国手动策略
       policies:
