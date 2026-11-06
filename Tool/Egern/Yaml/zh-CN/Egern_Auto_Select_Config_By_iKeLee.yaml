@@ -154,12 +154,7 @@ rules:
       match: https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/HK.lsr
       policy: DIRECT
       update_interval: 86400
-  # WLOC 已于 2026-11-04 被苹果证书固定封死, 此条默认禁用; 哪天复活把 disabled 改成 false 即可
-  - rule_set:
-      match: https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/WLOC.lsr
-      policy: 全节点手动策略
-      update_interval: 86400
-      disabled: true
+  # (WLOC 规则集已于 2026-11-06 移除: WLOC 于 2026-11-04 被苹果证书固定封死)
   # 个人定制: Bybit 走韩国
   - rule_set:
       match: https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Bybit.lsr
