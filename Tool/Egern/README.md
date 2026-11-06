@@ -56,7 +56,7 @@
 
 ### 直接扔
 
-- WLOC 插件 `wloc.lpx`：WLOC 已于 2026-11-04 被苹果证书固定（pinningrules 热更新）封死，全版本通杀，不要迁。配置里的 WLOC 规则集也已默认 `disabled: true`。
+- WLOC（插件 `wloc.lpx` + 规则集 `WLOC.lsr`）：已于 2026-11-06 从 Loon 与 Egern 两份配置中一并移除/注释（WLOC 于 2026-11-04 被苹果证书固定封死，全版本通杀）。仓库 `Tool/Loon/Rules/WLOC.lsr` 文件保留未删，仅作存档，不再被任何配置引用。
 
 ## 与 Loon 版的有意差异
 
