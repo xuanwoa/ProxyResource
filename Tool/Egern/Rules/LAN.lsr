@@ -1,0 +1,21 @@
+# NAME: LAN
+
+# AUTHOR: xuanwoa
+
+# REPO: https://github.com/xuanwoa/ProxyResource
+
+# DESCRIPTION: Private & reserved IP ranges routed DIRECT. Referenced by the Egern profile as a single rule set so the rules list stays clean. Corresponds to Loon skip-proxy + bypass-tun. Note: 100.64.0.0/10 (Tailscale CGNAT) is intentionally NOT included - it belongs to Egern's built-in Tailscale.
+
+
+IP-CIDR,10.0.0.0/8
+IP-CIDR,127.0.0.0/8
+IP-CIDR,169.254.0.0/16
+IP-CIDR,172.16.0.0/12
+IP-CIDR,192.0.0.0/24
+IP-CIDR,192.0.2.0/24
+IP-CIDR,192.88.99.0/24
+IP-CIDR,192.168.0.0/16
+IP-CIDR,198.51.100.0/24
+IP-CIDR,203.0.113.0/24
+IP-CIDR,224.0.0.0/4
+IP-CIDR,255.255.255.255/32
