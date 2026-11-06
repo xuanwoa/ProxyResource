@@ -166,7 +166,8 @@ https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/XHS
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/DE.lsr, policy=德国手动策略, tag=DE, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/US.lsr, policy=美国手动策略, tag=US, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/HK.lsr, policy=DIRECT, tag=HK, enabled=true
-https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/WLOC.lsr, policy=全节点手动策略, tag=WLOC, enabled=true
+# WLOC 已于 2026-11-04 被苹果证书固定封死, 本行于 2026-11-06 注释停用
+# https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/WLOC.lsr, policy=全节点手动策略, tag=WLOC, enabled=true
 https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/Bybit.lsr, policy=韩国手动策略, tag=Bybit, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
 
@@ -189,8 +190,8 @@ https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx, enabled=true
-# 定位修改
-https://raw.githubusercontent.com/xuanwoa/wloc/refs/heads/main/modules/wloc.lpx, enabled=true
+# 定位修改 (WLOC 已封死, 插件于 2026-11-06 注释停用)
+# https://raw.githubusercontent.com/xuanwoa/wloc/refs/heads/main/modules/wloc.lpx, enabled=true
 # 工具
 https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=全节点手动策略, enabled=true
