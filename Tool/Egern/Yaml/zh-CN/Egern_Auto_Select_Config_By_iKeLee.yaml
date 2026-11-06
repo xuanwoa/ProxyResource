@@ -1,7 +1,7 @@
 # Egern 配置 —— 由 Loon 配置等价迁移
 # 源文件: Tool/Loon/Lcf/zh-CN/Loon_Auto_Select_Config_By_iKeLee.lcf (模板作者: iKeLee / https://t.me/iKeLee)
 # 迁移日期: 2026-11-06
-# 本轮终极版修订 (2026-11-06): 私有网段由 bypass 改为规则直连; 补 default_proxy_group; 移除 WLOC
+# 本轮终极版修订 (2026-11-06): 私有网段由 bypass 改为规则直连并收纳进 Rules/LAN.lsr (规则列表只占一行); 补 default_proxy_group; 移除 WLOC
 #
 # 【导入后必做的两件事】
 # 1. 把下方 policy_groups 里「机场节点池」的两个占位订阅链接, 换成你 Loon「远程代理」里的真实机场订阅链接
@@ -34,7 +34,7 @@ direct_latency_test_url: http://connectivitycheck.platform.hicloud.com/generate_
 hijack_dns:
   - '*'
 
-# 私有/保留网段不在这里绕过隧道, 改用 rules 顶部的 ip_cidr 规则直连 (借鉴官方默认配置):
+# 私有/保留网段不在这里绕过隧道, 改用 rules 顶部的 LAN 规则集直连 (借鉴官方默认配置):
 # 流量先进 Egern 再被规则放行, 以后加 Tailscale 子网路由回家时, 在规则顶部插一条即可;
 # 若放进 bypass, 流量根本不进 Egern, 内网穿透会断。
 # 100.64.0.0/10 (Tailscale 的 CGNAT 网段) bypass 和直连规则里都不放, 完整留给内置 Tailscale。
@@ -112,44 +112,12 @@ default_subscription_group: 机场节点池
 default_proxy_group: 全节点手动策略
 
 rules:
-  # 私有/保留网段直连 (对应 Loon 的 skip-proxy + bypass-tun, 改为规则形态; 与 LAN_SPLITTER 规则集互为兜底)
-  # 以后若加「家里网段 -> Tailscale」的子网路由规则, 必须插到这一批的最上面
-  - ip_cidr:
-      match: 10.0.0.0/8
+  # 私有/保留网段直连: 12 条 CIDR 收纳在仓库的 Tool/Egern/Rules/LAN.lsr 里, 这里只占一行 (对应 Loon 的 skip-proxy + bypass-tun)
+  # 以后若加「家里网段 -> Tailscale」的子网路由规则, 必须插到这一条的上面
+  - rule_set:
+      match: https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Egern/Rules/LAN.lsr
       policy: DIRECT
-  - ip_cidr:
-      match: 127.0.0.0/8
-      policy: DIRECT
-  - ip_cidr:
-      match: 169.254.0.0/16
-      policy: DIRECT
-  - ip_cidr:
-      match: 172.16.0.0/12
-      policy: DIRECT
-  - ip_cidr:
-      match: 192.0.0.0/24
-      policy: DIRECT
-  - ip_cidr:
-      match: 192.0.2.0/24
-      policy: DIRECT
-  - ip_cidr:
-      match: 192.88.99.0/24
-      policy: DIRECT
-  - ip_cidr:
-      match: 192.168.0.0/16
-      policy: DIRECT
-  - ip_cidr:
-      match: 198.51.100.0/24
-      policy: DIRECT
-  - ip_cidr:
-      match: 203.0.113.0/24
-      policy: DIRECT
-  - ip_cidr:
-      match: 224.0.0.0/4
-      policy: DIRECT
-  - ip_cidr:
-      match: 255.255.255.255/32
-      policy: DIRECT
+      update_interval: 86400
   # 远程规则与 Loon [Remote Rule] 一一对应, 顺序和策略绑定保持原样
   - rule_set:
       match: https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Loon/Rules/PH.lsr
