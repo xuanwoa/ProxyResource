@@ -1,7 +1,7 @@
 # Egern 配置 —— 由 Loon 配置等价迁移
 # 源文件: Tool/Loon/Lcf/zh-CN/Loon_Auto_Select_Config_By_iKeLee.lcf (模板作者: iKeLee / https://t.me/iKeLee)
 # 迁移日期: 2026-11-06
-# 本轮终极版修订 (2026-11-06): 私有网段由 bypass 改为规则直连并收纳进 Rules/LAN.lsr (规则列表只占一行); 补 default_proxy_group; 移除 WLOC; 移除 auto_update (防止刷新配置冲掉 App 里填的订阅)
+# 本轮终极版修订 (2026-11-06): 私有网段由 bypass 改为规则直连并收纳进 Rules/LAN.lsr (规则列表只占一行); 补 default_proxy_group; 移除 WLOC
 #
 # 【导入后必做的两件事】
 # 1. 把下方 policy_groups 里「机场节点池」的两个占位订阅链接, 换成你 Loon「远程代理」里的真实机场订阅链接
@@ -9,9 +9,10 @@
 # 2. 在 Egern 里重新生成 MITM CA 证书并到系统设置里信任 (插件解密依赖它)
 # 插件(模组)不在本文件内, 清单和加法见 Tool/Egern/README.md
 
-# 注意: 本文件【不设】配置文件自动更新 (auto_update)。
-# 原因: 真实订阅链接只填在 App 本地 (仓库是公开的, 不能写进来), 而配置文件一旦自动更新,
-# 就会用本文件里的占位链接覆盖掉 App 里填好的订阅。要更新本配置: 手动重新导入一次, 然后重填一次订阅链接。
+# 配置文件自动更新: 指向本文件在 GitHub 上的地址, 仓库里改了 App 里自动同步
+auto_update:
+  url: https://raw.githubusercontent.com/xuanwoa/ProxyResource/main/Tool/Egern/Yaml/zh-CN/Egern_Auto_Select_Config_By_iKeLee.yaml
+  interval: 86400
 
 # 对应 Loon: ip-mode = v4-only, ipv6-vif = off
 ipv6: false
