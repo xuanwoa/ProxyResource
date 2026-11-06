@@ -7,7 +7,7 @@
 # 1. 把下方 policy_groups 里「机场节点池」的两个占位订阅链接, 换成你 Loon「远程代理」里的真实机场订阅链接
 #    (原 Loon .lcf 文件里没有订阅链接, 是本地添加的, 必须手动抄过来; 只有一个机场就删掉多余的一行)
 # 2. 在 Egern 里重新生成 MITM CA 证书并到系统设置里信任 (插件解密依赖它)
-# 插件(模组)不在本文件内, 清单和加法见 Tool/Egern/README.md
+# 插件(模组)已内嵌在本文件末尾的 modules 段, 导入即自动安装; 说明见 Tool/Egern/README.md
 
 # 配置文件自动更新: 指向本文件在 GitHub 上的地址, 仓库里改了 App 里自动同步
 auto_update:
@@ -173,3 +173,65 @@ rules:
   # 对应 Loon: FINAL, 全节点手动策略
   - default:
       policy: 全节点手动策略
+
+# 插件 (模组) 已内嵌: 导入或更新本配置时, Egern 会按下面清单自动下载安装, 不用再去「工具 → 模组」逐个添加。
+# 与 Loon [Plugin] 一一对应 (共 18 个; WLOC 插件已随规则一同移除)。
+modules:
+  # 网络/DNS 类
+  - url: https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/HTTPDNS.Block.plugin
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+    enabled: true
+    update_interval: 86400
+  # kelee 去广告系 (与 Loon 插件同一批链接, Egern 官方支持导入 Loon 插件)
+  - url: https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx
+    enabled: true
+    update_interval: 86400
+  # 工具类 (个别用 Loon 专有接口的可能装上但不生效, 验活清单见 README; 坏了不影响上网)
+  - url: https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/NodeLinkCheck.lpx
+    enabled: true
+    update_interval: 86400
+  - url: https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx
+    enabled: true
+    update_interval: 86400
+  # BoxJS / Sub-Store / Script-Hub (Sub-Store 用其官方 Egern 原生模块, 其余用原 Loon 插件链接)
+  - url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin
+    enabled: true
+    update_interval: 86400
+  - url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Egern.yaml
+    enabled: true
+    update_interval: 86400
+  - url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin
+    enabled: true
+    update_interval: 86400
