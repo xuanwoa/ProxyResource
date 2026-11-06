@@ -60,7 +60,8 @@
 
 ## 与 Loon 版的有意差异
 
-- `bypass_tunnel_proxy` 里去掉了 `100.64.0.0/10`：这是 Tailscale 的 CGNAT 网段，Egern 内置 Tailscale 就活在这个网段里，绕过隧道等于关掉内网穿透。原 Loon 模板带这条是因为 Loon 没有内置 Tailscale。
+- 私有/保留网段采用**规则直连**（`rules` 顶部的 `ip_cidr → DIRECT`，借鉴官方默认配置的写法），不走 `bypass_tunnel_proxy` 绕过：流量先进 Egern 再被规则放行，以后加 Tailscale 子网路由回家时只需在规则顶部插一条即可。`100.64.0.0/10`（Tailscale CGNAT 网段）在 bypass 和直连规则里都不出现，完整留给内置 Tailscale。官方默认档里的 `geoip: GB → DIRECT` 明确不借（按地区/定位生成的坑，本人在大陆会把英国流量直连送死）。
+- 补了官方默认档的 `default_proxy_group`（指向「全节点手动策略」）：在 App 里手动新加的单个节点会自动落进主组。
 - DNS 沿用系统 DNS（Loon 原配置即 `dns-server = system`），未额外指定 DoH；kelee 的 Prevent_DNS_Leaks 模组导入后照旧工作。
 
 ## Tailscale（本次迁移的主要目的）
