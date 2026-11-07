@@ -1,7 +1,7 @@
 # NAME: HK
 # AUTHOR: xuanwoa
 # REPO: https://github.com/xuanwoa/ProxyResource
-# UPDATED: 2026-10-29
+# UPDATED: 2026-11-07
 # DESCRIPTION: Hong Kong financial services routed directly from the main Loon config.
 # NOTE: Keep first-party service domains small and exact.
 
@@ -23,6 +23,10 @@ DOMAIN-SUFFIX,ifastgb.com
 DOMAIN-SUFFIX,hsbc.com.hk
 DOMAIN-SUFFIX,hsbc.com.mo
 DOMAIN-SUFFIX,hsbc.com
+
+# Octopus Cards
+# Source: https://www.octopuscards.com/
+DOMAIN-SUFFIX,octopuscards.com
 
 # ZA Bank
 # Source: https://bank.za.group/
