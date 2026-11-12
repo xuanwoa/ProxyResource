@@ -321,6 +321,10 @@ DOMAIN-SUFFIX,stripe.com
 # Source: https://lemfi.com/
 DOMAIN-SUFFIX,lemfi.com
 
+# Nala
+DOMAIN,partners-api.prod.nala-api.com
+DOMAIN,www.nala.com
+
 # Chase UK
 # Source: https://www.chase.co.uk/
 DOMAIN-SUFFIX,chase.co.uk
