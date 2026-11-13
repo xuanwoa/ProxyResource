@@ -1,7 +1,7 @@
 # NAME: UK
 # AUTHOR: xuanwoa
 # REPO: https://github.com/xuanwoa/ProxyResource
-# UPDATED: 2026-10-26
+# UPDATED: 2026-11-13
 # DESCRIPTION: UK financial services routed through 英国手动策略 from the main Loon config.
 # NOTE: Keep first-party app entries small. PayPal rules are vendored from blackmatrix7 because PayPal has many domains.
 
@@ -332,3 +332,11 @@ DOMAIN-SUFFIX,chase.co.uk
 # Ria Money Transfer
 # Source: https://www.riamoneytransfer.com/
 DOMAIN-SUFFIX,riamoneytransfer.com
+
+# Zilch UK
+# Source: https://payzilch.com/
+DOMAIN-SUFFIX,payzilch.com
+
+# AppsFlyer OneLink used by Zilch app deep links
+# Source: https://payzilch.com/
+DOMAIN-SUFFIX,onelink.me
