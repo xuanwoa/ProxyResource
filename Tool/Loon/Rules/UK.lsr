@@ -336,6 +336,7 @@ DOMAIN-SUFFIX,riamoneytransfer.com
 # Zilch UK
 # Source: https://payzilch.com/
 DOMAIN-SUFFIX,payzilch.com
+DOMAIN-SUFFIX,zilch.com
 
 # AppsFlyer OneLink used by Zilch app deep links
 # Source: https://payzilch.com/
